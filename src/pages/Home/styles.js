@@ -31,8 +31,10 @@ export const ProductTitle = styled.Text`
 `;
 
 export const ProductPrice = styled.Text`
+  margin: 14px 0px;
   font-size: 28px;
   font-weight: bold;
+  margin-bottom: 14px;
 `;
 
 export const AddButton = styled.TouchableOpacity`
