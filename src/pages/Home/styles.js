@@ -2,8 +2,6 @@ import styled from 'styled-components/native';
 import { darken } from 'polished';
 
 export const Container = styled.View`
-  flex: 1;
-  background: #191920;
 `;
 
 export const Title = styled.Text`
@@ -11,14 +9,19 @@ export const Title = styled.Text`
   font-size: 20px;
 `;
 
-export const ProductList = styled.View``;
-
+export const ProductList = styled.FlatList.attrs({
+  showsVerticalScrollIndicator: false,
+  horizontal: true,
+})`
+  margin-top: 20px;
+`;
 export const Product = styled.View`
   background: #fff;
   padding: 10px;
   margin: 10px;
   border-radius: 4px;
   width: 270px;
+  height: 450px;
 `;
 
 export const ProductImage = styled.Image`
@@ -31,10 +34,11 @@ export const ProductTitle = styled.Text`
 `;
 
 export const ProductPrice = styled.Text`
+  flex: 1;
+  justify-content: flex-end;
   margin: 14px 0px;
   font-size: 28px;
   font-weight: bold;
-  margin-bottom: 14px;
 `;
 
 export const AddButton = styled.TouchableOpacity`
